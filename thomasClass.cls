@@ -18,3 +18,8 @@
 
 %-----BUILD CUSTOM COMMANDS-------
 \newcommand{\tempText}[2]{\color{#1}#2\color{black}}
+\newcommand{\blockQuote}[1]{\begin{table}[H]
+    \begin{tabularx}{0.9\textwidth} { c | X }
+         &  \textsc{#1}
+    \end{tabularx}
+\end{table}}
