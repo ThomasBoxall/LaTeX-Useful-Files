@@ -1,0 +1,76 @@
+%Requires thomasClass
+%-------CUSTOM COMMAND FOR RECIPE-----
+
+%Have two commands, \recipeTitle and \recipe to avoid the max parameter length. Usage is at the bottom.
+
+\newcommand{\recipeTitle}[3]{
+    \newpage
+    \title{\textbf{#1}}
+    \author{#2}
+    \date{#3}
+    \maketitle
+}
+
+
+\newcommand{\recipe}[9]{
+    
+    \begin{figure}[H]
+    \begin{minipage}[t]{0.17\textwidth}
+    %servings
+    \textbf{\faCutlery \ Servings}\\
+    #1
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.17\textwidth}
+    %prep time
+    \textbf{\faClockO \ Prep Time}\\
+    #2
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.17\textwidth}
+    %cook time
+    \textbf{\faClockO \ Cook time}\\
+    #3
+    \end{minipage} \hfill
+    \begin{minipage}[t]{0.17\textwidth}
+    %difficulty
+    \textbf{\faStarHalfO \  Difficulty}\\
+    #4
+    \end{minipage} \hfill
+    \begin{minipage}[t]{0.17\textwidth}
+    %veggie vegan
+    \textbf{\faTag \ Diet}\\
+    #5    
+    \end{minipage}
+    \end{figure}
+    %Main body of recipe
+    \begin{figure}[H]
+    \begin{minipage}[t]{0.3\textwidth}
+    \section*{Ingredients}
+    \begin{itemize}
+        #6
+    \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.65\textwidth}
+    \section*{Method}
+        \begin{enumerate}
+            #7
+        \end{enumerate}
+    \end{minipage}
+    \end{figure}
+    
+    %Fill to bottom of page then add substitutions and notes 
+    \vfill
+    \begin{figure}[H]
+    \begin{minipage}[t]{0.55\textwidth}
+    \section*{Notes}
+        #8
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.35\textwidth}
+    \section*{Substitutions}
+        #9
+    \end{minipage}
+    \end{figure}
+}
+
+%USAGE
+% \recipeTItle{title}{where recipe is from}{Date/another subtitle}
+%\recipe{servings}{prep time}{cook time}{difficulty}{diet}{ingredients}{method}{notes}{substitutions}
