@@ -14,7 +14,8 @@
 \RequirePackage{float}
 \RequirePackage{graphicx}
 \RequirePackage{tabularx}
-\usepackage{fontawesome}
+\RequirePackage{fontawesome}
+\RequirePackage[colorlinks=true, linkcolor=magenta]{hyperref}
 
 %-----BUILD CUSTOM COMMANDS-------
 \newcommand{\tempText}[2]{\color{#1}#2\color{black}}
