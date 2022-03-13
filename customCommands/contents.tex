@@ -1,0 +1,19 @@
+% From https://latex.org/forum/viewtopic.php?t=33444
+
+%Command to make short table of contents at start of document then can add a full toc at end of document.
+
+%At very end of preamble:
+\makeatletter
+\newcommand*{\tableofcontentssummary}{%
+  \begingroup
+    \value{tocdepth}=0\relax% usually show part, chapter and section only
+    \@fileswfalse
+    \renewcommand*{\contentsname}{Contents}%
+    \tableofcontents
+  \endgroup
+}
+\makeatother
+
+%then use the \tableofcontentssummary command in document for short TOC
+
+%Can use \tableofcontents as usual AFTER \tableofcontentssummary (only after).
