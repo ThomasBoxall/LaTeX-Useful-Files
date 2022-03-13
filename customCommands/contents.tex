@@ -17,3 +17,9 @@
 %then use the \tableofcontentssummary command in document for short TOC
 
 %Can use \tableofcontents as usual AFTER \tableofcontentssummary (only after).
+
+% If don't want full contents to force onto new page (eg, if including it straight afer a \chapter{} in an appendix), use following (from https://latex.org/forum/viewtopic.php?t=19443):
+\begingroup
+\let\clearpage\relax
+\tableofcontents
+\endgroup
