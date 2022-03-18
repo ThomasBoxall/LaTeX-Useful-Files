@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{thomasClass}[2022/01/06 My custom document class]
-\LoadClass[a4, 11pt]{article}
+\LoadClass[a4paper, 11pt]{article}
 \usepackage{geometry}
  \geometry{
  a4paper,
