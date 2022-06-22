@@ -8,6 +8,7 @@
  left=20mm,
  top=20mm,
  }
+ \setlength\parindent{0pt} % get rid of the stupid indent
 %----DECLARE PACKAGES----
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{xcolor}
